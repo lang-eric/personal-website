@@ -5,12 +5,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script> 
 $(document).ready(function(){
-    $("div").animate({
-      left: '250px',
-      opacity: '0.5',
-      height: '150px',
-      width: '150px'
-    });
+  var div = $("div");
+  div.animate({height: '300px', opacity: '0.4'}, "slow");
+  div.animate({width: '300px', opacity: '0.8'}, "slow");
+  div.animate({height: '100px', opacity: '0.4'}, "slow");
+  div.animate({width: '100px', opacity: '0.8'}, "slow");
+  div.animate({background-color: coral}, "slow");
 });
 </script> 
 </head>
