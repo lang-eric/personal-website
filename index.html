@@ -1,22 +1,37 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script> 
 $(document).ready(function(){
-  var div = $("div");
-  div.animate({height: '300px', opacity: '0.4'}, "slow");
-  div.animate({width: '300px', opacity: '0.8'}, "slow");
-  div.animate({height: '100px', opacity: '0.4'}, "slow");
-  div.animate({width: '100px', opacity: '0.8'}, "slow");
-  div.animate({background-color: coral, left: '250px'}, "slow");
-});
+  for (i = 0; i < 10000; i++) {
+    var div = $("#doanimate");
+    div.animate({height: '200px', width:'700px', opacity: '0.8'}, 1000, 'linear');
+    div.animate({height: '200px', width:'350px',opacity: '0.4', fontSize: "90px", fontWeight:"bold"}, 3000, 'linear');
+    div.animate({height: '100px', width:'100px',opacity: '0.4',fontSize: "30px",}, 400, 'linear');
+    }
+    });
 </script> 
 </head>
-<body>
-<div>
-<p> Welcome to my website. Thanks for coming. </p>
+<body style ="background:#0000FF">
+
+<div id= "doanimate" style="background:#00bf21;height:100px;width:100px;position:absolute;fontSize:20px;color:white">
+
+<p> welcome to my website! </p>
+<p> i hope you enjoy it. </p>
 </div>
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<div id="dont" >
+<p> did I do j-query good? </p>
+</div>
+
 </body>
+
 </html>
