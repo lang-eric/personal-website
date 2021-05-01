@@ -6,8 +6,8 @@
 $(document).ready(function(){
   for (i = 0; i < 10000; i++) {
     var div = $("#doanimate");
-    div.animate({height: '200px', width:'700px', opacity: '0.8'}, 1000, 'linear');
-    div.animate({height: '200px', width:'350px',opacity: '0.4', fontSize: "90px", fontWeight:"bold"}, 3000, 'linear');
+    div.animate({height: '1100px', width:'700px', opacity: '0.8'}, 1000, 'linear');
+    div.animate({height: '300px', width:'600px',opacity: '0.4', fontSize: "150px", fontWeight:"bold"}, 5000, 'linear');
     div.animate({height: '100px', width:'100px',opacity: '0.4',fontSize: "30px",}, 400, 'linear');
     }
     });
@@ -15,23 +15,17 @@ $(document).ready(function(){
 </head>
 <body style ="background:#0000FF">
 
-<div id= "doanimate" style="background:#00bf21;height:100px;width:100px;position:absolute;fontSize:20px;color:white">
+<div id= "doanimate" style="float:left;background:#00bf21;height:100px;width:150px;position:absolute;font-size:20px;color:white">
 
 <p> welcome to my website! </p>
 <p> i hope you enjoy it. </p>
+<img src="https://i.kym-cdn.com/photos/images/original/001/694/402/061.gif"></img>
 </div>
 
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
 
-<div id="dont" >
-<p> did I do j-query good? </p>
+<div id="dont" style ="float:right">
+<p style = "font-size:25px; color:white;"> did I do j-query good? </p>
 </div>
-
 </body>
 
 </html>
