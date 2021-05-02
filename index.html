@@ -50,7 +50,13 @@
 
 	var amnt_to_move = $(window).width() - 775;
 	function is_checked(){
-	return $("#bit-checkbox").is(":checked");
+		
+		document.getElementById('bit-checkbox').addEventListener('change' , (event) => {
+if(event.target.checked){
+	return true
+	;
+}
+})
 	}
 	function show_excl() {
 		var excl = $("#pExcl");
