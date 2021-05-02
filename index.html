@@ -12,8 +12,8 @@
 			var excl = $("#pExcl");
 			var olives = $("#bla");
 			var check = $("#bit-checkbox");
-			if ($("#bit-checkbox").is(":checked") == true){
-
+			if ($("#bit-checkbox").prop('checked') == false){
+				alert('yee')
 				break;
 			}
 			olives.animate({
