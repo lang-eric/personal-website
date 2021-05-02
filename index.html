@@ -11,9 +11,11 @@
 			var div = $("#doanimate");
 			var excl = $("#pExcl");
 			var olives = $("#bla");
+			var check = $("#bit-checkbox")
 			olives.animate({
-				"left": "-=700px", height: "+=10px", width: "+=10px"
+				"left": "-=700px",
 			}, 1444, 'linear');
+			check.animate({ height: "+=10px", width: "+=10px"},1000,'linear')
 			div.animate({
 				height: '480px',
 				width: '500px',
@@ -80,7 +82,7 @@
 	<div id="bla" style="float:right; position:absolute;   padding-top: 300px;">
 		<span>click me</span>
 		<div class="bit-field" id = "click-me">
-			<input type="checkbox" class="bit-checkbox" name="r-pizza" value="Other" id="r-pizza-olives" />
+			<input type="checkbox" id="bit-checkbox" name="r-pizza" value="Other" id="r-pizza-olives" />
 		</div>
 	</div>
 	</div>
