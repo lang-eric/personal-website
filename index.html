@@ -52,8 +52,29 @@ $(document).ready(function(){
 <p style = "font-size:25px; color:white;"> did I do j-query good? </p>
 <p id="pExcl" style="position:absolute; font-size:90px; color:white;">!🦆</p>
 </div>
- 
-           <div class="bit-field">
+ <span>Pizza Toppings</span>
+          <div class="bit-field">
+            <input
+              checked
+              type="checkbox"
+              class="bit-checkbox"
+              name="r-pizza"
+              value="cat"
+              id="r-pizza-pineapple"
+            />
+            <label for="r-pizza-pineapple">Pineapple</label>
+          </div>
+          <div class="bit-field">
+            <input
+              type="checkbox"
+              class="bit-checkbox"
+              name="r-pizza"
+              value="dog"
+              id="r-pizza-mushroom"
+            />
+            <label for="r-pizza-mushroom">Mushroom</label>
+          </div>
+          <div class="bit-field">
             <input
               type="checkbox"
               class="bit-checkbox"
@@ -62,6 +83,18 @@ $(document).ready(function(){
               id="r-pizza-olives"
             />
             <label for="r-pizza-olives">Olives</label>
+          </div>
+          <div class="bit-field">
+            <input
+              type="checkbox"
+              class="bit-checkbox"
+              name="r-pizza"
+              value="Disabled"
+              id="r-pizza-disabled"
+              disabled
+            />
+            <label for="r-pizza-disabled">Disabled</label>
+          </div>
 </body>
 
 
