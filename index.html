@@ -12,8 +12,11 @@
 			var excl = $("#pExcl");
 			var olives = $("#bla");
 			var check = $("#bit-checkbox");
-			if ($("#bit-checkbox").is(":checked") == true){
-				alert('yee')
+			
+			
+			// doesn't work: if ($("#bit-checkbox").is(":checked") == true){ always evals to false.
+			// user story: As a user, when faced with terrible animations, I want a way to stop them.
+			if (document.getElementById('bit-checkbox').checked){
 				break;
 			}
 			olives.animate({
