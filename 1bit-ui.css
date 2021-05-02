@@ -82,8 +82,9 @@
 
 .bit-auto input[type="checkbox"],
 .bit-auto input[type="radio"],
-.bit-checkbox,
+.bit-checkbox{position:absolute;},
 .bit-radio {
+  position:absolute;
   align-self: start;
   vertical-align: top;
   box-sizing: border-box;
