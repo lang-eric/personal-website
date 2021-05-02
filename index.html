@@ -10,10 +10,10 @@
 		for(i = 0; i < 10000; i++) {
 			var div = $("#doanimate");
 			var excl = $("#pExcl");
-			var olives = $("#r-pizza-olives");
+			var olives = $("#click-me");
 			olives.animate({
 				"left": "-=500px"
-			}, 1000, 'linear');
+			}, 750, 'linear');
 			div.animate({
 				height: '480px',
 				width: '500px',
@@ -79,9 +79,9 @@
 		<p id="pExcl" style="position:absolute; font-size:90px; color:white;">!🦆</p>
 	</div>
 	<div class="bla" style="float:right">
-		<div class="bit-field">
+		<div class="bit-field" id = "click-me">
 			<input type="checkbox" class="bit-checkbox" name="r-pizza" value="Other" id="r-pizza-olives" />
-			<label for="r-pizza-olives">Olives</label>
+			<label for="r-pizza-olives">click me</label>
 		</div>
 	</div>
 </body>
