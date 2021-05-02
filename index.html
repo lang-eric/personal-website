@@ -1,86 +1,89 @@
 <!DOCTYPE html>
 <html lang="en" class="bit-root bit-scrollbar">
+
 <head>
-<link rel="stylesheet" href="1bit-ui.css" />
+	<link rel="stylesheet" href="1bit-ui.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	$(document).ready(function() {
+		for(i = 0; i < 10000; i++) {
+			var div = $("#doanimate");
+			var excl = $("#pExcl");
+			var olives = $("#r-pizza-olives");
+			olives.animate({
+				"left": "-=500px"
+			}, 1000, 'linear');
+			div.animate({
+				height: '480px',
+				width: '500px',
+				opacity: '1.0'
+			}, 1040, 'linear', show_excl);
+			div.animate({
+				height: '200px',
+				width: '600px',
+				opacity: '0.7',
+				fontSize: "150px",
+				fontWeight: "bold"
+			}, 5500, 'linear');
+			div.animate({
+				height: '100px',
+				width: '100px',
+				opacity: '0.4',
+				fontSize: "30px",
+			}, 1200, 'linear', hide_excl)
+   			olives.animate({
+				"left": "+=500px"
+			}, 1000, 'linear');
+		}
+	});
+	var amnt_to_move = $(window).width() - 775;
 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script> 
- 
-$(document).ready(function(){
-  for (i = 0; i < 10000; i++) {
-    var div = $("#doanimate");
-        var excl = $("#pExcl");
-        var olives = $("#r-pizza-olives");
-    olives.animate({"left":"+=50px"},1000,'linear')
-    div.animate({height: '480px', width:'500px', opacity: '1.0'}, 1040, 'linear', show_excl);
+	function show_excl() {
+		var excl = $("#pExcl");
+		excl.animate({
+			"left": "-=".concat(amnt_to_move).concat("px")
+		}, 1000, 'linear').animate({
+			fontSize: "+=70px"
+		}, 500, 'linear').animate({
+			"top": "-=220px",
+			opacity: '1.0',
+			color: 'red'
+		}, 1500, 'linear');
+	}
 
-    div.animate({height: '200px', width:'600px',opacity: '0.7', fontSize: "150px", fontWeight:"bold"}, 5500, 'linear');
-
-    div.animate({height: '100px', width:'100px',opacity: '0.4',fontSize: "30px",}, 1200, 'linear',hide_excl)
-    }
-    });
-    
-    var amnt_to_move = $(window).width() - 775;
-
-    function show_excl(){
-    var excl = $("#pExcl");
-         excl.animate({"left":"-=".concat(amnt_to_move).concat("px")}, 1000, 'linear').animate({fontSize:"+=70px"},500,'linear').animate({"top":"-=220px", opacity:'1.0', color:'red'}, 1500, 'linear');
-
-
-    }
-    function hide_excl(){
-    var excl = $("#pExcl");
-    var move_left = "+=".concat(amnt_to_move).concat("px");
-         excl.animate({"left":move_left, opacity:'0.0'}, 1000, 'linear').animate({"top":"+=220px"}, 500, 'linear').animate({fontSize:"-=70px", color:"white"},1500,'linear');
-
-    }
-</script> 
+	function hide_excl() {
+		var excl = $("#pExcl");
+		var move_left = "+=".concat(amnt_to_move).concat("px");
+		excl.animate({
+			"left": move_left,
+			opacity: '0.0'
+		}, 1000, 'linear').animate({
+			"top": "+=220px"
+		}, 500, 'linear').animate({
+			fontSize: "-=70px",
+			color: "white"
+		}, 1500, 'linear');
+	}
+	</script>
 </head>
-<body style ="background:#0000FF">
 
-<div id= "doanimate" style="position: absolute;float:left;background:#00bf21;height:150px;width:200px;position:absolute;font-size:20px;color:white">
-
-<div id="pWelcome" style="position: absolute;">
-<span>welcome to my website!</span>
-<p> i hope you enjoy it. </p>
-<img src="https://i.kym-cdn.com/photos/images/original/001/694/402/061.gif"></img>
-</div>
-</div>
-
-
-<div id="dont" style ="float:right">
-<p style = "font-size:25px; color:white;"> did I do j-query good? </p>
-<p id="pExcl" style="position:absolute; font-size:90px; color:white;">!🦆</p>
-</div>
-           <div class="site-gap"></div>
-
-          <div class="bla" style="float:right">
- <span>Pizza Toppings</span>
-          <div class="bit-field">
-            <input
-              type="checkbox"
-              class="bit-checkbox"
-              name="r-pizza"
-              value="dog"
-              id="r-pizza-mushroom"
-            />
-            <label for="r-pizza-mushroom">Mushroom</label>
-          </div>
-          <div class="bit-field">
-            <input
-              type="checkbox"
-              class="bit-checkbox"
-              name="r-pizza"
-              value="Other"
-              id="r-pizza-olives"
-            />
-            <label for="r-pizza-olives">Olives</label>
-          </div>
-
-          </div>
- </div>
+<body style="background:#0000FF">
+	<div id="doanimate" style="position: absolute;float:left;background:#00bf21;height:150px;width:200px;position:absolute;font-size:20px;color:white">
+		<div id="pWelcome" style="position: absolute;"> <span>welcome to my website!</span>
+			<p> i hope you enjoy it. </p> <img src="https://i.kym-cdn.com/photos/images/original/001/694/402/061.gif">
+		</div>
+	</div>
+	<div id="dont" style="float:right">
+		<p style="font-size:25px; color:white;"> did I do j-query good? </p>
+		<p id="pExcl" style="position:absolute; font-size:90px; color:white;">!🦆</p>
+	</div>
+	<div class="bla" style="float:right">
+		<div class="bit-field">
+			<input type="checkbox" class="bit-checkbox" name="r-pizza" value="Other" id="r-pizza-olives" />
+			<label for="r-pizza-olives">Olives</label>
+		</div>
+	</div>
 </body>
-
 
 </html>
