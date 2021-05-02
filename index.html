@@ -5,8 +5,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
+                    $(document).ready(function() {
+
         function loop() {
-            $(document).ready(function() {
 
                     var div = $("#doanimate");
                     var excl = $("#pExcl");
@@ -43,7 +44,6 @@
                     }, 1000, 'linear');
                 
             is_checked();
-        });
         }
         var amnt_to_move = $(window).width() - 775;
 
@@ -80,6 +80,8 @@
                 color: "white"
             }, 1500, 'linear');
         }
+                                });
+
         is_checked();
     </script>
 </head>
