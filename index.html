@@ -12,14 +12,14 @@
 			var excl = $("#pExcl");
 			var olives = $("#bla");
 			var check = $("#bit-checkbox")
-			if (check.prop("checked") == true){
+			if (check.is(":checked") == true){
 
 				break;
 			}
 			olives.animate({
 				"left": "-=700px",
 			}, 1444, 'linear');
-			check.animate({ height: "+=10px", width: "+=10px"},4000,'linear')
+			check.animate({ height: "+=10px", width: "+=10px"},8000,'linear')
 			div.animate({
 				height: '480px',
 				width: '500px',
@@ -52,7 +52,7 @@
 		}, 1000, 'linear').animate({
 			fontSize: "+=70px"
 		}, 500, 'linear').animate({
-			"top": "-=200px",
+			"top": "-=260px",
 			opacity: '1.0',
 			color: 'red'
 		}, 1500, 'linear');
@@ -65,7 +65,7 @@
 			"left": move_left,
 			opacity: '0.2'
 		}, 1000, 'linear').animate({
-			"top": "+=200px"
+			"top": "+=260px"
 		}, 500, 'linear').animate({
 			fontSize: "-=70px",
 			color: "white"
