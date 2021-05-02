@@ -49,9 +49,15 @@
 
         }
         var amnt_to_move = $(window).width() - 775;
+        var what = false;
+        $('input[id=bit-checkbox]').change(function() {
+  if ($(this).is(':checked')) {
+        what = true;
+  }
+            });
 
-        function is_checked() {
-            if ($("#bit-checkbox").is(":checked")){ } else {
+        }     function is_checked() {
+            if (what){} else {
                 loop();
             }
 
