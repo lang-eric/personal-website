@@ -5,63 +5,60 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-
         function loop() {
-                                $(document).ready(function() {
+            $(document).ready(function() {
 
 
-                    var div = $("#doanimate");
-                    var excl = $("#pExcl");
-                    var olives = $("#bla");
-                    var check = $("#bit-checkbox");
+                var div = $("#doanimate");
+                var excl = $("#pExcl");
+                var olives = $("#bla");
+                var check = $("#bit-checkbox");
 
-                    olives.animate({
-                        "left": "-=700px",
-                    }, 1444, 'linear');
-                    check.animate({
-                        height: "+=10px",
-                        width: "+=10px"
-                    }, 1000, 'linear')
-                    div.animate({
-                        height: '480px',
-                        width: '500px',
-                        opacity: '1.0'
-                    }, 1040, 'linear', show_excl);
-                    div.animate({
-                        height: '200px',
-                        width: '600px',
-                        opacity: '0.7',
-                        fontSize: "150px",
-                        fontWeight: "bold"
-                    }, 5500, 'linear');
-                    div.animate({
-                        height: '100px',
-                        width: '100px',
-                        opacity: '0.4',
-                        fontSize: "30px",
-                    }, 1200, 'linear', hide_excl)
-                    olives.animate({
-                        "left": "+=700px"
-                    }, 1000, 'linear');
-                
-            is_checked();
-                                                                    });
+                olives.animate({
+                    "left": "-=700px",
+                }, 1444, 'linear');
+                check.animate({
+                    height: "+=10px",
+                    width: "+=10px"
+                }, 1000, 'linear')
+                div.animate({
+                    height: '480px',
+                    width: '500px',
+                    opacity: '1.0'
+                }, 1040, 'linear', show_excl);
+                div.animate({
+                    height: '200px',
+                    width: '600px',
+                    opacity: '0.7',
+                    fontSize: "150px",
+                    fontWeight: "bold"
+                }, 5500, 'linear');
+                div.animate({
+                    height: '100px',
+                    width: '100px',
+                    opacity: '0.4',
+                    fontSize: "30px",
+                }, 1200, 'linear', hide_excl)
+                olives.animate({
+                    "left": "+=700px"
+                }, 1000, 'linear');
+            });
 
         }
         var amnt_to_move = $(window).width() - 775;
         var what = false;
+        
         $('input[id=bit-checkbox]').change(function() {
-  if ($(this).is(':checked')) {
-        what = true;
-  }
-            });
-
-        }     function is_checked() {
-            if (what){} else {
-                loop();
+            if ($(this).is(':checked')) {
+                
             }
+            else{
+                            loop();
+            }
+        });
 
-        }
+        
+
 
         function show_excl() {
             var excl = $("#pExcl");
