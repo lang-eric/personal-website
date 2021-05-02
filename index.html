@@ -11,7 +11,8 @@ $(document).ready(function(){
   for (i = 0; i < 10000; i++) {
     var div = $("#doanimate");
         var excl = $("#pExcl");
-
+        var olives = $("#r-pizza-olives");
+    olives.animate({"left":"+=50px"},1000,'linear')
     div.animate({height: '480px', width:'500px', opacity: '1.0'}, 1040, 'linear', show_excl);
 
     div.animate({height: '200px', width:'600px',opacity: '0.7', fontSize: "150px", fontWeight:"bold"}, 5500, 'linear');
