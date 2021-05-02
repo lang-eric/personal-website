@@ -5,6 +5,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
+        
+        document.addEventListener("DOMContentLoaded", function (event) {
+    var _selector = document.querySelector('input[name=bit-checkbox]');
+    _selector.addEventListener('change', function (event) {
+        if (_selector.checked) {
+$(".block").stop( true, true );
+        } else {
+            // do something else otherwise
+        }
+    });
+});
+        function loop(){
         $(document).ready(function() {
             for (i = 0; i < 10000; i++) {
 
@@ -47,10 +59,11 @@
                 }, 1200, 'linear', hide_excl)
                 olives.animate({
                     "left": "+=700px"
-                }, 1000, 'linear');
+                }, 1000, 'linear',loop);
             }
         });
-
+        }
+        loop();
         var amnt_to_move = $(window).width() - 775;
 
         function is_checked() {
@@ -104,7 +117,7 @@
         <div id="bla" style="float:right; position:absolute;   padding-top: 600px;">
             <span style="color:white; font-size: 30px; fontweight:bold;">click me to stop the animations</span>
             <div class="bit-field" id="click-me">
-                <input type="checkbox" id="bit-checkbox" />
+                <input type="checkbox" name="bit-checkbox" id="bit-checkbox" />
             </div>
         </div>
     </div>
