@@ -5,6 +5,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
+        $('input[id=bit-checkbox]').change(function() {
+            if ($(this).is(':checked')) {
+
+            } else {
+                loop();
+            }
+        });
+
+
         function loop() {
             $(document).ready(function() {
 
@@ -47,17 +56,7 @@
         }
         var amnt_to_move = $(window).width() - 775;
         var what = false;
-        
-        $('input[id=bit-checkbox]').change(function() {
-            if ($(this).is(':checked')) {
-                
-            }
-            else{
-                            loop();
-            }
-        });
 
-        
 
 
         function show_excl() {
