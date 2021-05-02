@@ -5,7 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-        $('input[id=bit-checkbox]').change(function() {
+        $('input[name=bit-checkbox]').change(function() {
             if ($(this).is(':checked')) {
 
             } else {
@@ -102,7 +102,7 @@
         <div id="bla" style="float:right; position:absolute;   padding-top: 600px;">
             <span style="color:white; font-size: 30px; fontweight:bold;">click me to stop the animations</span>
             <div class="bit-field" id="click-me">
-                <input type="checkbox" id="bit-checkbox" />
+                <input type="checkbox" id= "bit-checkbox" name="bit-checkbox" />
             </div>
         </div>
     </div>
