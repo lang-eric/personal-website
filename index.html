@@ -16,7 +16,7 @@
 			
 			// doesn't work: if ($("#bit-checkbox").is(":checked") == true){ always evals to false.
 			// user story: As a user, when faced with terrible animations, I want a way to stop them.
-			if (document.getElementById('bit-checkbox').checked == true){
+			if (is_checked()){
 				alert("why");
 				break;
 			}
@@ -49,7 +49,9 @@
 				});
 
 	var amnt_to_move = $(window).width() - 775;
-
+	function is_checked(){
+	return $("#bit-checkbox").is(":checked") == true;
+	}
 	function show_excl() {
 		var excl = $("#pExcl");
 		excl.animate({
