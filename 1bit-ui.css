@@ -27,8 +27,7 @@
   --bit-border-width: 2px;
   --bit-border-radius: 0px;
   --bit-select-handle-width: 1em;
-  background: var(--bit-color1);
-  color: var(--bit-color0);
+
 }
 
 /* Checkbox / Radio Button Field Container */
