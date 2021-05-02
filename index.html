@@ -5,21 +5,14 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script>
+		function loop(){
 		$(document).ready(function() {
-		for(i = 0; i < 10000; i++) {
 			
 			var div = $("#doanimate");
 			var excl = $("#pExcl");
 			var olives = $("#bla");
 			var check = $("#bit-checkbox");
-			
-			
-			// doesn't work: if ($("#bit-checkbox").is(":checked") == true){ always evals to false.
-			// user story: As a user, when faced with terrible animations, I want a way to stop them.
-			if (is_checked()){
-				alert("why");
-				break;
-			}
+		
 			olives.animate({
 				"left": "-=700px",
 			}, 1444, 'linear');
@@ -46,11 +39,13 @@
 				"left": "+=700px"
 			}, 1000, 'linear');
 		}
-				});
-
+		}
+				  
 	var amnt_to_move = $(window).width() - 775;
 	function is_checked(){
-	return $("#bit-checkbox").is(":checked");
+	if $("#bit-checkbox").is(":checked"){
+	}else{loop();}
+
 	}
 	function show_excl() {
 		var excl = $("#pExcl");
