@@ -10,12 +10,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
     _selector.addEventListener('change', function (event) {
         if (_selector.checked) {
 alert("thanks");
+            yeet = true;
         } else {
             // do something else otherwise
             loop();
         }
     });
 });
+        loop();
+var yeet = false;
 
         function loop() {
             $(document).ready(function() {
@@ -55,7 +58,9 @@ alert("thanks");
                     "left": "+=700px"
                 }, 1000, 'linear');
             });
-
+        if (!yeet){
+            loop();
+        }
         }
         var amnt_to_move = $(window).width() - 775;
         var what = false;
