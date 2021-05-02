@@ -12,7 +12,7 @@
 			var excl = $("#pExcl");
 			var olives = $("#bla");
 			var check = $("#bit-checkbox")
-			if (check.is(":checked")){
+			if (check.prop("checked"){
 				break;
 			}
 			olives.animate({
@@ -62,7 +62,7 @@
 		var move_left = "+=".concat(amnt_to_move).concat("px");
 		excl.animate({
 			"left": move_left,
-			opacity: '0.0'
+			opacity: '0.2'
 		}, 1000, 'linear').animate({
 			"top": "+=220px"
 		}, 500, 'linear').animate({
