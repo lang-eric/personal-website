@@ -5,6 +5,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script>
+		$(document).ready(function() {
 		for(i = 0; i < 10000; i++) {
 			
 			var div = $("#doanimate");
@@ -45,6 +46,8 @@
 				"left": "+=700px"
 			}, 1000, 'linear');
 		}
+				});
+
 	var amnt_to_move = $(window).width() - 775;
 
 	function show_excl() {
