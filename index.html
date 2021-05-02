@@ -5,29 +5,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-document.addEventListener("DOMContentLoaded", function (event) {
-    var _selector = document.querySelector('input[name=bit-checkbox]');
-    _selector.addEventListener('change', function (event) {
-        if (_selector.checked) {
-                 $("#doanimate").stop();      
-                yeet = true;
-        } else {
-            // do something else otherwise
-        }
-    });
-});
-        loop();
-var yeet = false;
-
-        function loop() {
-            $(document).ready(function() {
-
+        $(document).ready(function() {
+            for (i = 0; i < 10000; i++) {
 
                 var div = $("#doanimate");
                 var excl = $("#pExcl");
                 var olives = $("#bla");
                 var check = $("#bit-checkbox");
 
+
+                // doesn't work: if ($("#bit-checkbox").is(":checked") == true){ always evals to false.
+                // user story: As a user, when faced with terrible animations, I want a way to stop them.
+                if (is_checked()) {
+                    alert("why");
+                    break;
+                }
                 olives.animate({
                     "left": "-=700px",
                 }, 1444, 'linear');
@@ -56,15 +48,20 @@ var yeet = false;
                 olives.animate({
                     "left": "+=700px"
                 }, 1000, 'linear');
-            });
-        if (!yeet){
-            loop();
-        }
-        }
+            }
+        });
+
         var amnt_to_move = $(window).width() - 775;
-        var what = false;
 
+        function is_checked() {
+            return $("#bit-checkbox").is(":checked");
 
+            document.getElementById('bit-checkbox').addEventListener('change', (event) => {
+                if (event.target.checked) {
+                    return true;
+                }
+            })
+        }
 
         function show_excl() {
             var excl = $("#pExcl");
@@ -107,7 +104,7 @@ var yeet = false;
         <div id="bla" style="float:right; position:absolute;   padding-top: 600px;">
             <span style="color:white; font-size: 30px; fontweight:bold;">click me to stop the animations</span>
             <div class="bit-field" id="click-me">
-                <input type="checkbox" id= "bit-checkbox" name="bit-checkbox" />
+                <input type="checkbox" id="bit-checkbox" />
             </div>
         </div>
     </div>
