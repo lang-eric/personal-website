@@ -34,6 +34,7 @@
 
 .bit-field {
   box-sizing: border-box;
+  position:absolute;
   display: grid;
   grid-gap: calc(2 * var(--bit-border-width));
   grid-template-columns: min-content 1fr;
