@@ -5,14 +5,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-        $('input[id=bit-checkbox]').change(function() {
-            if ($(this).is(':checked')) {
-                alert("checked");
-            } else {
-                loop();
-            }
-        });
-
+document.addEventListener("DOMContentLoaded", function (event) {
+    var _selector = document.querySelector('input[name=bit-checkbox]');
+    _selector.addEventListener('change', function (event) {
+        if (_selector.checked) {
+alert("thanks");
+        } else {
+            // do something else otherwise
+            loop();
+        }
+    });
+});
 
         function loop() {
             $(document).ready(function() {
