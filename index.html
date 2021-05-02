@@ -30,7 +30,10 @@ $("#pExcl").stop( true, true );
                 // user story: As a user, when faced with terrible animations, I want a way to stop them.
                 if (is_checked()) {
                     alert("why");
-                    break;
+                $("#pExcl").stop( true, true );
+                    $("#olives").stop( true, true );
+$("#div").stop( true, true );
+
                 }
                 olives.animate({
                     "left": "-=700px",
