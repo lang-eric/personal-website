@@ -64,6 +64,12 @@
          quotes: "\201C""\201D""\2018""\2019";
          padding: 10px 20px;
          line-height: 1.4;
+                  background: linear-gradient(-34deg, #004400, #c2040F, #0007ff);
+         background-size: 99% 113%;
+         border-radius: 22px;
+         -webkit-animation: AnimationName 2s cubic-bezier(0.4, 0.7, 0.5, 0.5)  infinite;
+         -moz-animation: AnimationName 2s cubic-bezier(0.1, 0.7, 1.0, 0.1) infinite;
+         animation: AnimationName 2s  cubic-bezier(0.4, 0.7, 0.5, 0.5) infinite;
          }
          blockquote:before {
          content: open-quote;
@@ -81,8 +87,8 @@
                      $(document).ready(function() {
                                var jq = $("#jeffquote");
                jq.animate({
-                          "left": "-=400px",
-                      }, 3000, 'linear');
+                          "left": "-=600px",
+                      }, 4000, 'linear');
          });
 
          loop();     
