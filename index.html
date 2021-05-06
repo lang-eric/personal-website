@@ -101,7 +101,8 @@
                         jq.css( { transition: "transform 4.5s",
                   transform:  "rotate(" + "-30" + "deg)" ,transform: "rotate3d(1, 0, 0, -90deg)" } );
 
-                        
+                        setTimeout( function() { jq.css( { transition: "none" } ) }, 4000 );
+
                                                 jq.css( { transition: "transform 4.5s",
                   transform:  "rotate(" + "10" + "deg)",transform: "rotate3d(1, 0, 0, 00deg)" } );
                         
