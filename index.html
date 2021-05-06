@@ -6,53 +6,53 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <style>
         #doanimate {
-            background: linear-gradient(22deg, #1FFF00, #c200FF, #e937ff);
+            background: linear-gradient(22deg, #1fff00, #c200ff, #e937ff);
             background-size: 99% 113%;
             border-radius: 22px;
             -webkit-animation: AnimationName 2s cubic-bezier(0.4, 0.7, 0.5, 0.5) infinite;
-            -moz-animation: AnimationName 2s cubic-bezier(0.1, 0.7, 1.0, 0.1) infinite;
+            -moz-animation: AnimationName 2s cubic-bezier(0.1, 0.7, 1, 0.1) infinite;
             animation: AnimationName 2s cubic-bezier(0.4, 0.7, 0.5, 0.5) infinite;
         }
 
         @-webkit-keyframes AnimationName {
             0% {
-                background-position: 15% 0%
+                background-position: 15% 0%;
             }
 
             50% {
-                background-position: 86% 100%
+                background-position: 86% 100%;
             }
 
             100% {
-                background-position: 15% 0%
+                background-position: 15% 0%;
             }
         }
 
         @-moz-keyframes AnimationName {
             0% {
-                background-position: 15% 0%
+                background-position: 15% 0%;
             }
 
             50% {
-                background-position: 86% 100%
+                background-position: 86% 100%;
             }
 
             100% {
-                background-position: 15% 0%
+                background-position: 15% 0%;
             }
         }
 
         @keyframes AnimationName {
             0% {
-                background-position: 15% 0%
+                background-position: 15% 0%;
             }
 
             50% {
-                background-position: 86% 100%
+                background-position: 86% 100%;
             }
 
             100% {
-                background-position: 15% 0%
+                background-position: 15% 0%;
             }
         }
 
@@ -67,64 +67,63 @@
 
         @-webkit-keyframes AnimationName {
             0% {
-                background-position: 0% 50%
+                background-position: 0% 50%;
             }
 
             50% {
-                background-position: 100% 50%
+                background-position: 100% 50%;
             }
 
             100% {
-                background-position: 0% 50%
+                background-position: 0% 50%;
             }
         }
 
         @-moz-keyframes AnimationName {
             0% {
-                background-position: 0% 50%
+                background-position: 0% 50%;
             }
 
             50% {
-                background-position: 100% 50%
+                background-position: 100% 50%;
             }
 
             100% {
-                background-position: 0% 50%
+                background-position: 0% 50%;
             }
         }
 
         @-o-keyframes AnimationName {
             0% {
-                background-position: 0% 50%
+                background-position: 0% 50%;
             }
 
             50% {
-                background-position: 100% 50%
+                background-position: 100% 50%;
             }
 
             100% {
-                background-position: 0% 50%
+                background-position: 0% 50%;
             }
         }
 
         @keyframes AnimationName {
             0% {
-                background-position: 0% 50%
+                background-position: 0% 50%;
             }
 
             50% {
-                background-position: 100% 50%
+                background-position: 100% 50%;
             }
 
             100% {
-                background-position: 0% 50%
+                background-position: 0% 50%;
             }
         }
 
         #jeffquote {
             transform: rotate(30deg);
             color: white;
-
         }
 
         .block {
@@ -135,17 +134,16 @@
             font-size: 30px;
             background: #f9f9f9;
             border-left: 10px solid #ccc;
-            margin: .5em 10px;
+            margin: 0.5em 10px;
             padding: 0 10px;
             quotes: "\201C""\201D""\2018""\2019";
             padding: 10px 20px;
             line-height: 1.2;
-            background: linear-gradient(-44deg, #0F69B4, #0000f9, #008801);
+            background: linear-gradient(-44deg, #0f69b4, #0000f9, #008801);
             background-size: 52% 43%;
-
             border-radius: 22px;
             -webkit-animation: AnimationName 5s cubic-bezier(0.4, 0.7, 0.5, 0.5) infinite;
-            -moz-animation: AnimationName 5s cubic-bezier(0.1, 0.7, 1.0, 0.1) infinite;
+            -moz-animation: AnimationName 5s cubic-bezier(0.1, 0.7, 1, 0.1) infinite;
             animation: AnimationName 5s cubic-bezier(0.4, 0.7, 0.5, 0.5) infinite;
         }
 
@@ -157,40 +155,50 @@
             left: -10px;
             position: relative;
             top: 30px;
-            color: #FFF;
+            color: #fff;
             font-size: 3em;
         }
     </style>
     <script>
-        $(document).ready(function() {
-            var jq = $("#jeffquote");
-            jq.animate({
-                "left": "-=600px"
-            }, 4000, 'linear');
-            
-            jq.css({
-                transition: "transform 4.5s",
-                transform: "rotate(" + "-30" + "deg)",
+        $(document)
+            .ready(function() {
+                var jq = $("#jeffquote");
+                var jq = $("#jeffquote");
+
+                jq.animate({
+                            left: "-=600px",
+                        },
+                        4000,
+                        "linear"
+                    )
+                    .css({
+                        transition: "transform 4.5s",
+                        transform: "rotate(" + "-30" + "deg)",
+                    })
+                    .css({
+                        transition: "transform 4.5s",
+                        transform: "rotate(" + "10" + "deg)",
+                    })
+                    .css({
+                        transition: "transform 4.5s",
+                        transform: "rotate3d(1, 0, 0, 180deg)",
+                    })
+                    .promise()
+                    .done(function() {
+                        jq.css({
+                            transition: "transform 2.5s",
+                            transform: "rotate3d(1, 0, 0, 0deg)"
+                        });
+                    });
+
+
             });
 
-            jq.css({
-                transition: "transform 4.5s",
-                transform: "rotate(" + "10" + "deg)",
-            });
 
-           jq.css({
-                transition: "transform 4.5s",
-                transform: "rotate3d(1, 0, 0, 360deg)",    
-
-              });
-
-
-          });
-   
         loop();
         document.addEventListener("DOMContentLoaded", function(event) {
-            var _selector = document.querySelector('input[name=bit-checkbox]');
-            _selector.addEventListener('change', function(event) {
+            var _selector = document.querySelector("input[name=bit-checkbox]");
+            _selector.addEventListener("change", function(event) {
                 if (_selector.checked) {
                     $("#pExcl").stop(true, true);
                     $("#bla").stop(true, true);
@@ -199,8 +207,9 @@
                     loop();
                 }
             });
-        });
 
+
+        });
 
         function loop() {
             $(document).ready(function() {
@@ -209,84 +218,127 @@
                 var olives = $("#bla");
                 var check = $("#bit-checkbox");
 
-
                 // doesn't work: if ($("#bit-checkbox").is(":checked") == true){ always evals to false.
                 // user story: As a user, when faced with terrible animations, I want a way to stop them.
 
                 olives.animate({
-                    "left": "-=700px",
-                }, 3000, 'linear');
+                        left: "-=700px",
+                    },
+                    3000,
+                    "linear"
+                );
                 check.animate({
-                    height: "+=10px",
-                    width: "+=10px"
-                }, 1000, 'linear')
+                        height: "+=10px",
+                        width: "+=10px",
+                    },
+                    1000,
+                    "linear"
+                );
                 div.animate({
-                    height: '480px',
-                    width: '500px',
-                    opacity: '1.0'
-                }, 1040, 'linear', show_excl);
+                        height: "480px",
+                        width: "500px",
+                        opacity: "1.0",
+                    },
+                    1040,
+                    "linear",
+                    show_excl
+                );
                 div.animate({
-                    height: '200px',
-                    width: '600px',
-                    opacity: '0.7',
-                    fontSize: "150px",
-                    fontWeight: "bold"
-                }, 5500, 'linear');
+                        height: "200px",
+                        width: "600px",
+                        opacity: "0.7",
+                        fontSize: "150px",
+                        fontWeight: "bold",
+                    },
+                    5500,
+                    "linear"
+                );
                 div.animate({
-                    height: '100px',
-                    width: '100px',
-                    opacity: '0.4',
-                    fontSize: "30px",
-                }, 1200, 'linear', hide_excl)
+                        height: "100px",
+                        width: "100px",
+                        opacity: "0.4",
+                        fontSize: "30px",
+                    },
+                    1200,
+                    "linear",
+                    hide_excl
+                );
                 olives.animate({
-                    "left": "+=700px"
-                }, 1000, 'linear', loop);
+                        left: "+=700px",
+                    },
+                    1000,
+                    "linear",
+                    loop
+                );
             });
         }
         var amnt_to_move = $(window).width() - 775;
 
-
         function show_excl() {
             var excl = $("#pExcl");
+
             excl.animate({
-                "left": "-=".concat(amnt_to_move).concat("px")
-            }, 1000, 'linear').animate({
-                fontSize: "+=70px"
-            }, 500, 'linear').animate({
-                "top": "-=260px",
-                opacity: '1.0',
-                color: 'blue'
-            }, 1500, 'linear');
+                    left: "-=".concat(amnt_to_move).concat("px"),
+                    fontSize: "+=70px",
+                    top: "-=260px",
+                    opacity: "1.0",
+                    color: "blue",
+                },1000, "linear").promise()
+                .done(function() {
+                    excl.css({
+                        transition: "transform 1.5s",
+                        transform: "rotate3d(1, 0, 0, 0deg)"
+                    });
+                });
+
+
+
+
         }
 
         function hide_excl() {
             var excl = $("#pExcl");
             var move_left = "+=".concat(amnt_to_move).concat("px");
+             excl.css({
+                        transition: "transform 1.5s",
+                        transform: "rotate3d(1, 0, 0, 120deg)"
+                    });
             excl.animate({
-                "left": move_left,
-                opacity: '0.2'
-            }, 1000, 'linear').animate({
-                "top": "+=260px"
-            }, 500, 'linear').animate({
-                fontSize: "-=70px",
-                color: "white"
-            }, 1500, 'linear');
+                        left: move_left,
+                        opacity: "0.2",
+                    },
+                    1000,
+                    "linear"
+                )
+                .animate({
+                        top: "+=260px",
+                    },
+                    500,
+                    "linear"
+                )
+                .animate({
+                        fontSize: "-=70px",
+                        color: "white",
+                    },
+                    1500,
+                    "linear"
+                );
         }
     </script>
 </head>
 
 <body>
-    <div id="doanimate" style="position: absolute;float:left;height:150px;width:200px;position:absolute;font-size:20px;color:white">
+    <div id="doanimate" style="position: absolute; float: left; height: 150px; width: 200px; position: absolute; font-size: 20px; color: white;">
         <div id="pWelcome" style="position: absolute;">
             <span>welcome to my website!</span>
-            <p> i hope you enjoy it. </p>
-            <img src="https://i.kym-cdn.com/photos/images/original/001/694/402/061.gif">
+            <p>i hope you enjoy it.</p>
+            <img src="https://i.kym-cdn.com/photos/images/original/001/694/402/061.gif" />
         </div>
     </div>
-    <div id="dont" style="float:right">
-        <p style="font-size:25px; color:white;"> did I do j-query good? </p>
-        <p id="pExcl" style="position:absolute; font-size:90px; color:white;">!🦆</p>
-        <div id="jeffquote" style=" position:absolute;  left:-=300px; width: 700px;   padding-top: 200px;">
+    <div id="dont" style="float: right;">
+        <p style="font-size: 25px; color: white;">did I do j-query good?</p>
+        <p id="pExcl" style="position: absolute; font-size: 90px; color: white;">!🦆</p>
+        <div id="jeffquote" style="position: absolute; left: -=300px; width: 700px; padding-top: 200px;">
             <blockquote>
                 <p class="block">
                     [T]his [website] is [truly] a work of [modern] art.
@@ -294,8 +346,8 @@
                 <footer>— Jeffery R.</footer>
             </blockquote>
         </div>
-        <div id="bla" style="float:right; position:absolute; padding-top: 600px;">
-            <span style="color:white; font-size: 30px; fontweight:bold;">click me to stop the animations</span>
+        <div id="bla" style="float: right; position: absolute; padding-top: 600px;">
+            <span style="color: white; font-size: 30px; fontweight: bold;">click me to stop the animations</span>
             <div class="bit-field" id="click-me">
                 <input type="checkbox" name="bit-checkbox" id="bit-checkbox" />
             </div>
