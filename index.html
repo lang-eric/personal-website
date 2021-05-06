@@ -167,10 +167,12 @@
             jq.animate({
                 "left": "-=600px"
             }, 4000, 'linear');
+            
             jq.css({
                 transition: "transform 4.5s",
                 transform: "rotate(" + "-30" + "deg)",
             });
+setTimeout( function() { jq.css( { transition: "none" } ) }, 4000 );
 
 
             jq.css({
@@ -181,11 +183,7 @@ setTimeout( function() { jq.css( { transition: "none" } ) }, 4000 );
 
            jq.css({
                 transition: "transform 4.5s",
-                transform: "rotate3d(1, 0, 0, -50deg)",
-    transform: "perspective(75em)",
-    transform: "rotateX(18deg)",
-  "box-shadow" : "rgba(22, 31, 39, 0.42) 0px 60px 123px -25px",
-   "box-shadow" : "rgba(19, 26, 32, 0.08) 0px 35px 75px -35px"
+                transform: "rotate3d(1, 0, 0, 50deg)"
               });
             setTimeout( function() { jq.css( { transition: "none" } ) }, 4000 );
 
