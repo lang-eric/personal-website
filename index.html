@@ -78,6 +78,13 @@
          }
       </style>
       <script>
+                     $(document).ready(function() {
+                               var jq = $("#jeffquote");
+               jq.animate({
+                          "left": "-=400px",
+                      }, 3000, 'linear');
+         });
+
          loop();     
               document.addEventListener("DOMContentLoaded", function (event) {
           var _selector = document.querySelector('input[name=bit-checkbox]');
@@ -92,13 +99,7 @@
           });
          });
          
-                    $(document).ready(function() {
-                               var jq = $("#jeffquote");
-               jq.animate({
-                          "left": "-=400px",
-                      }, 3000, 'linear');
-         });
-
+        
               function loop(){
               $(document).ready(function() {
                       var div = $("#doanimate");
