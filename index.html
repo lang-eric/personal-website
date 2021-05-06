@@ -72,8 +72,9 @@
          quotes: "\201C""\201D""\2018""\2019";
          padding: 10px 20px;
          line-height: 1.2;
-                  background: linear-gradient(-44deg, #0F69B4, #0000f9, #008801);
+         background: linear-gradient(-44deg, #0F69B4, #0000f9, #008801);
          background-size: 52% 43%;
+         
          border-radius: 22px;
          -webkit-animation: AnimationName 5s cubic-bezier(0.4, 0.7, 0.5, 0.5)  infinite;
          -moz-animation: AnimationName 5s cubic-bezier(0.1, 0.7, 1.0, 0.1) infinite;
@@ -97,12 +98,12 @@
                jq.animate({
                           "left": "-=600px"
                       }, 4000, 'linear');
-                        jq.css( { transition: "transform 3.5s",
-                  transform:  "rotate(" + "-30" + "deg)" } );
+                        jq.css( { transition: "transform 4.5s",
+                  transform:  "rotate(" + "-30" + "deg)" ,transform: "rotate3d(1, 0, 0, -90deg)" } );
 
 setTimeout( function() { jq.css( { transition: "none" } ) }, 4000 );
-                                                jq.css( { transition: "transform 3.5s",
-                  transform:  "rotate(" + "10" + "deg)" } );
+                                                jq.css( { transition: "transform 4.5s",
+                  transform:  "rotate(" + "10" + "deg)",transform: "rotate3d(1, 0, 0, 90deg)" } );
 
 setTimeout( function() { jq.css( { transition: "none" } ) }, 4000 );
                         
