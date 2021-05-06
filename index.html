@@ -97,7 +97,12 @@
                         jq.css( { transition: "transform 3.5s",
                   transform:  "rotate(" + "-30" + "deg)" } );
 
-setTimeout( function() { jq.css( { transition: "none" } ) }, 2000 );
+setTimeout( function() { jq.css( { transition: "none" } ) }, 4000 );
+                                                jq.css( { transition: "transform 3.5s",
+                  transform:  "rotate(" + "10" + "deg)" } );
+
+setTimeout( function() { jq.css( { transition: "none" } ) }, 4000 );
+                        
          });
 
          loop();     
