@@ -55,6 +55,9 @@
          50%{background-position:100% 50%}
          100%{background-position:0% 50%}
          }
+         #jeffquote{
+         transform: rotate(30deg);
+         }
          blockquote{
          font-size: 30px;
          background: #f9f9f9;
@@ -79,7 +82,7 @@
          left: -10px;
          position: relative;
          top: 30px;
-         color: silver;
+         color: white;
          font-size: 3em;
          }
       </style>
@@ -87,7 +90,7 @@
                      $(document).ready(function() {
                                var jq = $("#jeffquote");
                jq.animate({
-                          "left": "-=600px",
+                          "left": "-=600px", transform: rotate(-20deg)
                       }, 4000, 'linear');
          });
 
