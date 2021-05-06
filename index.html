@@ -6,12 +6,13 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <style>
         #doanimate{
-    background: linear-gradient(44deg, #10FF00, #c20000, #e937ff);
+    background: linear-gradient(66deg, #10FF00, #c200FF, #e937ff);
     background-size: 99% 83%;
  border-radius: 32px;
-    -webkit-animation: AnimationName 2s ease infinite;
-    -moz-animation: AnimationName 2s ease infinite;
-    animation: AnimationName 2s ease infinite;
+            transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    -webkit-animation: AnimationName 2s cubic-bezier(0.1, 0.7, 1.0, 0.1)  infinite;
+    -moz-animation: AnimationName 2s cubic-bezier(0.1, 0.7, 1.0, 0.1) infinite;
+    animation: AnimationName 2s cubic-bezier(0.1, 0.7, 1.0, 0.1) infinite;
 }
 
 @-webkit-keyframes AnimationName {
