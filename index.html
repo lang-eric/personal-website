@@ -217,11 +217,19 @@
                 var excl = $("#pExcl");
                 var olives = $("#bla");
                 var check = $("#bit-checkbox");
+                var twitter = $("#lolol");
+
 
                 // doesn't work: if ($("#bit-checkbox").is(":checked") == true){ always evals to false.
                 // user story: As a user, when faced with terrible animations, I want a way to stop them.
 
                 olives.animate({
+                        left: "-=700px",
+                    },
+                    3000,
+                    "linear"
+                );
+                      twitter.animate({
                         left: "-=700px",
                     },
                     3000,
@@ -264,6 +272,13 @@
                     hide_excl
                 );
                 olives.animate({
+                        left: "+=700px",
+                    },
+                    1000,
+                    "linear",
+                    loop
+                );
+                  twitter.animate({
                         left: "+=700px",
                     },
                     1000,
@@ -325,12 +340,14 @@
                 );
         }
     </script>
+    
 <iframe
   src="https://platform.twitter.com/widgets/follow_button.html?screen_name=EricLang_&show_screen_name=true&show_count=false&size=l"
   title="Follow EricLang_ on Twitter"
   width="80"
   height="30"
   style="border: 0; overflow: hidden;"
+  id="lolol"
   ></iframe>
 </head>
 
